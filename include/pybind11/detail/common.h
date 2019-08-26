@@ -31,9 +31,7 @@
 #  if __cplusplus >= 201402L
 #    define PYBIND11_CPP14
 #    if __cplusplus >= 201703L
-#      if !defined(__ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__) || __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__>= 101400
-#        define PYBIND11_CPP17
-#      endif
+#      define PYBIND11_CPP17
 #    endif
 #  endif
 #elif defined(_MSC_VER) && __cplusplus == 199711L

@@ -574,7 +574,8 @@ public:
             if (type->operator_new) {
                 vptr = type->operator_new(type->type_size);
             } else {
-                #if defined(PYBIND11_CPP17)
+                #if defined(PYBIND11_CPP17) && (!defined(__ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__) || __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__>= 101400)
+
                     if (type->type_align > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
                         vptr = ::operator new(type->type_size,
                                               (std::align_val_t) type->type_align);
