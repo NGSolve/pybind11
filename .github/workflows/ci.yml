@@ -73,7 +73,7 @@ jobs:
       run: brew install boost
 
     - name: Update CMake
-      uses: jwlawson/actions-setup-cmake@v1.11
+      uses: jwlawson/actions-setup-cmake@v1.12
 
     - name: Cache wheels
       if: runner.os == 'macOS'
@@ -211,7 +211,7 @@ jobs:
         debug: ${{ matrix.python-debug }}
 
     - name: Update CMake
-      uses: jwlawson/actions-setup-cmake@v1.11
+      uses: jwlawson/actions-setup-cmake@v1.12
 
     - name: Valgrind cache
       if: matrix.valgrind
@@ -464,7 +464,7 @@ jobs:
       run: python3 -m pip install --upgrade pip
 
     - name: Update CMake
-      uses: jwlawson/actions-setup-cmake@v1.11
+      uses: jwlawson/actions-setup-cmake@v1.12
 
     - name: Configure
       shell: bash
@@ -758,7 +758,7 @@ jobs:
         architecture: x86
 
     - name: Update CMake
-      uses: jwlawson/actions-setup-cmake@v1.11
+      uses: jwlawson/actions-setup-cmake@v1.12
 
     - name: Prepare MSVC
       uses: ilammy/msvc-dev-cmd@v1.10.0
@@ -805,7 +805,7 @@ jobs:
         python-version: ${{ matrix.python }}
 
     - name: Update CMake
-      uses: jwlawson/actions-setup-cmake@v1.11
+      uses: jwlawson/actions-setup-cmake@v1.12
 
     - name: Prepare MSVC
       uses: ilammy/msvc-dev-cmd@v1.10.0
@@ -864,7 +864,7 @@ jobs:
         python-version: ${{ matrix.python }}
 
     - name: Update CMake
-      uses: jwlawson/actions-setup-cmake@v1.11
+      uses: jwlawson/actions-setup-cmake@v1.12
 
     - name: Prepare env
       run: |
